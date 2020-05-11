@@ -1,0 +1,21 @@
+{
+    "name": "Iteration1",
+    "version": "1.0.0",
+    "keywords": [
+        "util",
+        "functional",
+        "server",
+        "client",
+        "browser"
+    ],
+    "author": "Félix",
+    "contributors": [],
+    "dependencies": {
+        "prettyjson": "^1.2.1",
+        "request": "^2.88.0",
+        "request-promise": "^4.2.5"
+    },
+    "scripts": {
+        "start": "node server.js"
+    }
+}
