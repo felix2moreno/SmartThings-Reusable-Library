@@ -1,5 +1,5 @@
 {
-    "name": "Iteration1",
+    "name": "SmartThings-Reusable-Library",
     "version": "1.0.0",
     "keywords": [
         "util",
@@ -8,7 +8,7 @@
         "client",
         "browser"
     ],
-    "author": "Félix",
+    "author": "Félix Moreno Moreno",
     "contributors": [],
     "dependencies": {
         "prettyjson": "^1.2.1",
