@@ -11,11 +11,16 @@
     "author": "Félix Moreno Moreno",
     "contributors": [],
     "dependencies": {
+        "esdoc": "^1.1.0",
+        "esdoc-standard-plugin": "^1.0.0",
         "prettyjson": "^1.2.1",
         "request": "^2.88.0",
         "request-promise": "^4.2.5"
     },
     "scripts": {
         "start": "node server.js"
+    },
+    "devDependencies": {
+        "minami": "^1.2.3"
     }
 }

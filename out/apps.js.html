@@ -1,14 +1,42 @@
-const rp = require('request-promise');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: apps.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: apps.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const rp = require('request-promise');
 const prettyjson = require('prettyjson');
 const requests = require('./requests');
 
 /**
  * Create a WebHook App integration.
  * @param {string} authToken - OAuth token.
- * @param {string} appName - <^[a-z0-9.-_]{1,250}$>. A globally unique, developer-defined identifier for an app.
- * @param {string} displayName - <= 75 characters. A default display name for an app.
- * @param {String} description - <= 250. A default description for an app.
- * @param {Array<string>} classifications - Array of AppClassification (string). 
+ * @param {string} appName - &lt;^[a-z0-9.-_]{1,250}$>. A globally unique, developer-defined identifier for an app.
+ * @param {string} displayName - &lt;= 75 characters. A default display name for an app.
+ * @param {String} description - &lt;= 250. A default description for an app.
+ * @param {Array&lt;string>} classifications - Array of AppClassification (string). 
  * @param {string} targetUrl - A URL that should be invoked during execution.
  * @param {boolean} dashboardCardsEnabled - Required. 
  * @param {boolean} preInstallDashboardCardsEnabled - Required. 
@@ -52,11 +80,11 @@ function createWebHookApp(authToken, appName, displayName, description, classifi
 /**
  * Create a WebHook App integration.
  * @param {string} authToken - OAuth token.
- * @param {string} appName - <^[a-z0-9.-_]{1,250}$>. A globally unique, developer-defined identifier for an app.
- * @param {string} displayName - <= 75 characters. A default display name for an app.
- * @param {String} description - <= 250. A default description for an app.
- * @param {Array<string>} classifications - Array of AppClassification (string). 
- * @param {Array<string>} functions - A list of AWS arns referencing a Lambda function.
+ * @param {string} appName - &lt;^[a-z0-9.-_]{1,250}$>. A globally unique, developer-defined identifier for an app.
+ * @param {string} displayName - &lt;= 75 characters. A default display name for an app.
+ * @param {String} description - &lt;= 250. A default description for an app.
+ * @param {Array&lt;string>} classifications - Array of AppClassification (string). 
+ * @param {Array&lt;string>} functions - A list of AWS arns referencing a Lambda function.
  * @param {boolean} dashboardCardsEnabled - Required. 
  * @param {boolean} preInstallDashboardCardsEnabled - Required. 
  * @param {Map} args - Not required arguments.
@@ -99,7 +127,7 @@ function createLambdaApp(authToken, appName, displayName, description, classific
 /**
  * List all apps configured in an account.
  * @param {string} authToken - OAuth token.
- * @returns {List<Object>} 
+ * @returns {List&lt;Object>} 
  */
 function appsList(authToken) {
     return rp(requests.request(authToken, `apps`, 'GET'));
@@ -119,9 +147,9 @@ function appDescription(authToken, appNameOrId) {
  * Update a WebHook App integration
  * @param {string} authToken - OAuth token.
  * @param {string} appNameOrId - The appName or appId field of an app.
- * @param {string} displayName - <= 75 characters. A default display name for an app.
- * @param {String} description - <= 250. A default description for an app.
- * @param {Array<string>} classifications - Array of AppClassification (string).
+ * @param {string} displayName - &lt;= 75 characters. A default display name for an app.
+ * @param {String} description - &lt;= 250. A default description for an app.
+ * @param {Array&lt;string>} classifications - Array of AppClassification (string).
  * @param {string} targetUrl - A URL that should be invoked during execution.
  * @param {boolean} dashboardCardsEnabled - Required. 
  * @param {boolean} preInstallDashboardCardsEnabled - Required. 
@@ -156,10 +184,10 @@ function updateWebHookApp(authToken, appNameOrId, displayName, description, clas
  * Update a Lambda App integration
  * @param {string} authToken - OAuth token.
  * @param {string} appNameOrId - The appName or appId field of an app.
- * @param {string} displayName - <= 75 characters. A default display name for an app.
- * @param {String} description - <= 250. A default description for an app.
- * @param {Array<string>} classifications - Array of AppClassification (string). 
- * @param {Array<string>} functions - A list of AWS arns referencing a Lambda function.
+ * @param {string} displayName - &lt;= 75 characters. A default display name for an app.
+ * @param {String} description - &lt;= 250. A default description for an app.
+ * @param {Array&lt;string>} classifications - Array of AppClassification (string). 
+ * @param {Array&lt;string>} functions - A list of AWS arns referencing a Lambda function.
  * @param {boolean} dashboardCardsEnabled - Required. 
  * @param {boolean} preInstallDashboardCardsEnabled - Required. 
  * @param {Map} args - Not required arguments.
@@ -237,8 +265,8 @@ function oauthSettings(authToken, appNameOrId) {
  * @param {string} authToken - OAuth token.
  * @param {string} appNameOrId - The appName or appId field of an app.
  * @param {string} clientName - A name given to the OAuth Client.
- * @param {Array<string>} scope - A list of SmartThings API OAuth scope identifiers.
- * @param {Array<string>} redirectUris - A list of redirect URIs.
+ * @param {Array&lt;string>} scope - A list of SmartThings API OAuth scope identifiers.
+ * @param {Array&lt;string>} redirectUris - A list of redirect URIs.
  */
 function updateOauthSettings(authToken, appNameOrId, clientName, scope, redirectUris) {
     let body = {};
@@ -308,3 +336,26 @@ module.exports = {
 
 
 
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#appDescription">appDescription</a></li><li><a href="global.html#appSettings">appSettings</a></li><li><a href="global.html#appsList">appsList</a></li><li><a href="global.html#confirmationRequest">confirmationRequest</a></li><li><a href="global.html#createLambdaApp">createLambdaApp</a></li><li><a href="global.html#createWebHookApp">createWebHookApp</a></li><li><a href="global.html#deleteApp">deleteApp</a></li><li><a href="global.html#generateAppOauth">generateAppOauth</a></li><li><a href="global.html#oauthSettings">oauthSettings</a></li><li><a href="global.html#updateLambdaApp">updateLambdaApp</a></li><li><a href="global.html#updateOauthSettings">updateOauthSettings</a></li><li><a href="global.html#updateSettings">updateSettings</a></li><li><a href="global.html#updateSignature">updateSignature</a></li><li><a href="global.html#updateWebHookApp">updateWebHookApp</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Mon May 25 2020 18:46:18 GMT+0200 (GMT+02:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
